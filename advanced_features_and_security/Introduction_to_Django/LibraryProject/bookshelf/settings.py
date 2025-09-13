@@ -20,11 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
 SECRET_KEY = 'django-insecure-rlmofsb%_l4f#jw*v^nkd84+hbz&ikfsp%89d(n*s^qzpzmhij'
-=======
-SECRET_KEY = 'django-insecure-*y*jd-+1y=&&3499x8w!obbie67y-86820z_#apv^6lj^!*u3$'
->>>>>>> 5e4bc08a88140142f400fd0f79ecfd19e4c29f3a
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -41,13 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bookshelf',
-<<<<<<< HEAD
     'bookshelf',   # 👈 added here
-=======
-    'accounts',   # 👈 Add this line
-
->>>>>>> 5e4bc08a88140142f400fd0f79ecfd19e4c29f3a
+    'relationship_app',
 ]
 
 MIDDLEWARE = [
@@ -131,32 +122,3 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-AUTH_USER_MODEL = 'bookshelf.CustomUser'
-<<<<<<< HEAD
-=======
-AUTH_USER_MODEL = 'bookshelf.CustomUser'
->>>>>>> 5e4bc08a88140142f400fd0f79ecfd19e4c29f3a
-# ============================================
-# Django Security Settings for HTTPS & Cookies
-# ============================================
-
-# Step 1: Enforce HTTPS
-SECURE_SSL_REDIRECT = True  # Redirect all HTTP to HTTPS
-
-# HTTP Strict Transport Security (HSTS)
-SECURE_HSTS_SECONDS = 31536000  # 1 year (in seconds)
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True  # Apply HSTS to all subdomains
-SECURE_HSTS_PRELOAD = True  # Allow site to be preloaded by browsers
-
-# Step 2: Secure Cookies
-SESSION_COOKIE_SECURE = True  # Session cookies only via HTTPS
-CSRF_COOKIE_SECURE = True     # CSRF cookies only via HTTPS
-
-# Step 3: Secure Headers
-X_FRAME_OPTIONS = "DENY"  # Prevent clickjacking (site cannot be iframed)
-SECURE_CONTENT_TYPE_NOSNIFF = True  # Prevent MIME type sniffing
-SECURE_BROWSER_XSS_FILTER = True    # Enable browser’s XSS protection (legacy)
-
-# ============================================
-# End of Security Settings
-# ============================================
