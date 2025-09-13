@@ -20,11 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
 SECRET_KEY = 'django-insecure-rlmofsb%_l4f#jw*v^nkd84+hbz&ikfsp%89d(n*s^qzpzmhij'
-=======
-SECRET_KEY = 'django-insecure-*y*jd-+1y=&&3499x8w!obbie67y-86820z_#apv^6lj^!*u3$'
->>>>>>> 5e4bc08a88140142f400fd0f79ecfd19e4c29f3a
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -42,12 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bookshelf',
-<<<<<<< HEAD
     'bookshelf',   # 👈 added here
-=======
-    'accounts',   # 👈 Add this line
-
->>>>>>> 5e4bc08a88140142f400fd0f79ecfd19e4c29f3a
 ]
 
 MIDDLEWARE = [
@@ -132,7 +123,3 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'bookshelf.CustomUser'
-<<<<<<< HEAD
-=======
-AUTH_USER_MODEL = 'bookshelf.CustomUser'
->>>>>>> 5e4bc08a88140142f400fd0f79ecfd19e4c29f3a

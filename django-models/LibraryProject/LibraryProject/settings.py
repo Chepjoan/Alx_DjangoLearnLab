@@ -20,16 +20,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
 SECRET_KEY = 'django-insecure-rlmofsb%_l4f#jw*v^nkd84+hbz&ikfsp%89d(n*s^qzpzmhij'
-=======
-SECRET_KEY = 'django-insecure-*y*jd-+1y=&&3499x8w!obbie67y-86820z_#apv^6lj^!*u3$'
->>>>>>> 5e4bc08a88140142f400fd0f79ecfd19e4c29f3a
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [    'relationship_app',
+]
 
 
 # Application definition
@@ -41,13 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bookshelf',
-<<<<<<< HEAD
     'bookshelf',   # 👈 added here
-=======
-    'accounts',   # 👈 Add this line
-
->>>>>>> 5e4bc08a88140142f400fd0f79ecfd19e4c29f3a
+    'relationship_app',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'relationship_app',
 ]
 
 ROOT_URLCONF = 'LibraryProject.urls'
@@ -65,16 +58,19 @@ ROOT_URLCONF = 'LibraryProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [    'relationship_app',
+],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-            ],
+                'relationship_app',
+],
         },
     },
+    'relationship_app',
 ]
 
 WSGI_APPLICATION = 'LibraryProject.wsgi.application'
@@ -107,6 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+    'relationship_app',
 ]
 
 
@@ -131,8 +128,3 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-AUTH_USER_MODEL = 'bookshelf.CustomUser'
-<<<<<<< HEAD
-=======
-AUTH_USER_MODEL = 'bookshelf.CustomUser'
->>>>>>> 5e4bc08a88140142f400fd0f79ecfd19e4c29f3a
